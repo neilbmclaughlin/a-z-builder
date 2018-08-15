@@ -18,9 +18,11 @@ keyed_words = [
 # build keys list from existing keys with a-z as minimum
 # keys = set([ word['key'] for word in keyed_words ] + list(string.ascii_lowercase) )
 
-# build keys from a-z plus digits, allows for keys to be deterministic but ...
-# is possible for content editor to add a title which starts with a char not in the keys which will throw an error
-keys = list(string.ascii_lowercase + string.digits)
+# build keys from a-z, allows for keys to be deterministic but ...
+# is possible for content editor to add a title which starts with a char not in
+# the keys which will be hidden from the user (e.g. the words starting with digits in 
+# wordlist.txt
+keys = list(string.ascii_lowercase)
 
 d = {}
 
